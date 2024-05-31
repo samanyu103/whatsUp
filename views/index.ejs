@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What'sUp</title>
+    <link rel="stylesheet" href="css/index_style.css">
+</head>
+<body>
+    <% if (msg!='') { %>
+        <script>
+            alert("<%= msg %>");
+        </script>
+    <% } %>
+    <div class="whatup">
+        <p class="writing">
+            <span class="what">What's</span>
+            <span class="up">Up</span>
+        </p>
+    </div>
+    <div class="login_box">
+        <form action="/" method="post" class="form">
+        <!-- <div class="form"> -->
+            <input type="email" class="field" id="username" name="username" placeholder="username">
+            <input type="password" class="field" id="password" name="password" placeholder="password">
+            <button class="btn" id="login" type="submit">LogIn</button>
+            <p class="or">OR</p>
+            <a href="/signup" class="btn" id="signup">SignUp</a>
+            <!-- <button class="btn" id="signup" >SignUp</button> -->
+        <!-- </div> -->
+        </form>
+    </div>
+</body>
+</html>
