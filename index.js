@@ -16,8 +16,8 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
-let dash_username=undefined;
-let dash_password=undefined;
+// let dash_username=undefined;
+// let dash_password=undefined;
 let users={};
 
 app.get('/', (req,res) => {
@@ -27,8 +27,8 @@ app.post('/', (req, res)=> {
     username = req.body.username;
     password=req.body.password;
     if (users[username] && users[username]==password) {
-        dash_username=username;
-        dash_password=password;
+        // dash_username=username;
+        // dash_password=password;
         res.redirect(`/dashboard?username=${username}`);
     }else{
         res.render('index', {msg:'incorrect credentials'});
